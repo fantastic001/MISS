@@ -1,14 +1,16 @@
 
 
 start = clock();
-t = 0:0.1:100000; 
+t = 0:0.1:10; 
 
 tau = 1.41; 
 
 k = 1 - exp(-t / tau);
 
-figure 
-plot(t, k)
+subplot(2,1,1)
+plot(t, k, "r*")
+subplot(2,1,2)
+plot(t, 2*k)
 
 finish = clock(); 
 
